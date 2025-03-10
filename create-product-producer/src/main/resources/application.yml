@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: create-product-producer
+  kafka:
+    producer:
+      bootstrap-servers: localhost:9092,localhost:9094
+      key-serializer: 'org.apache.kafka.common.serialization.StringSerializer'
+      value-serializer: 'org.springframework.kafka.support.serializer.JsonSerializer'
+      acks: all
+#      retries: 10
+      properties:
+        delivery.timeout.ms: 120000 # padrão dois minutos
+        linger.ms: 0 # tempo de espera para enviar a mensagem (juntar lote)
+        request.timeout.ms: 30000 # tempo de espera para resposta do broker
+#        retry.backoff.ms: 1000
+        enable.idempotence: true
+
+
+server:
+  port: 0
