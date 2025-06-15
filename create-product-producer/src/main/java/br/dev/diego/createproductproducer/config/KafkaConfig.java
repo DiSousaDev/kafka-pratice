@@ -1,6 +1,6 @@
 package br.dev.diego.createproductproducer.config;
 
-import br.dev.diego.createproductproducer.service.ProductCreatedEvent;
+import br.dev.diego.core.ProductCreatedEvent;
 import org.apache.kafka.clients.admin.NewTopic;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
