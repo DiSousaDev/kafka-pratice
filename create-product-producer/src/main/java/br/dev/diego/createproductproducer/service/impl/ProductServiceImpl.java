@@ -1,7 +1,7 @@
 package br.dev.diego.createproductproducer.service.impl;
 
+import br.dev.diego.core.ProductCreatedEvent;
 import br.dev.diego.createproductproducer.controller.request.CreateProductRequest;
-import br.dev.diego.createproductproducer.service.ProductCreatedEvent;
 import br.dev.diego.createproductproducer.service.ProductService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
