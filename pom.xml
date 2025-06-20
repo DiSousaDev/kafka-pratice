@@ -10,6 +10,7 @@
     <modules>
         <module>create-product-producer</module>
         <module>email-notification-service</module>
+        <module>mock-service</module>
     </modules>
 
 </project>
