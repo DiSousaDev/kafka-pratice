@@ -27,11 +27,11 @@ public class ProductCreatedEventHandler {
 
     @KafkaHandler
     public void handle(ProductCreatedEvent event) {
-        LOGGER.info("Handling product created event: {}", event);
+        LOGGER.info("Handling product created event: {}. With productId: {}", event.getTitle(), event.getProductId());
 //        if(true) {
 //            throw new NotRetryableException("Simulated exception for testing error handling");
 //        }
-        String requestUrl = "http://localhost:8084/responses/500";
+        String requestUrl = "http://localhost:8084/responses/200";
 
         try {
             ResponseEntity<String> response = restTemplate.exchange(requestUrl, HttpMethod.GET, null, String.class);
